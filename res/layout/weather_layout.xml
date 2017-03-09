@@ -8,7 +8,14 @@
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:background="#484e61" >
-
+		<Button 
+		    android:id="@+id/bt_switch_city"
+		    android:layout_width="60dp"
+		    android:layout_height="40dp"
+		    android:layout_marginLeft="10dp"
+		    android:layout_centerVertical="true"
+		    android:text="切换"
+		    />
         <TextView
             android:id="@+id/tv_city_name"
             android:layout_width="wrap_content"
@@ -17,6 +24,15 @@
             android:textColor="#fff"
             android:text="福州"
             android:textSize="24sp" />
+        <Button 
+		    android:id="@+id/bt_refresh_weather"
+		    android:layout_width="60dp"
+		    android:layout_height="40dp"
+		    android:layout_marginRight="10dp"
+		    android:layout_alignParentRight="true"
+		    android:layout_centerVertical="true"
+		    android:text="更新"
+		    />
     </RelativeLayout>
 
     <RelativeLayout

@@ -58,19 +58,23 @@ public class ChooseAreaActivity extends Activity {
 	private List<String> dataList = new ArrayList<String>();
 	private ArrayAdapter<String> adapter;
 	private CoolWeatherDB coolWeatherDB;
+	private boolean isFromWeatherActivity;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
+		
+		
+		isFromWeatherActivity = getIntent().getBooleanExtra("from_weather_activity", false);
 		//如果有这个说明已经选择过了城市，就直接跳转到天气页面
-		/*SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(this);
-		if(prefs.getBoolean("city_selected", false)){
+		SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(this);
+		if(prefs.getBoolean("city_selected", false) && !isFromWeatherActivity){
 			Intent intent = new Intent(this,WeatherActivity.class);
 			startActivity(intent);
 			finish();
 			return;
 			
-		}*/
+		}
 		
 		requestWindowFeature(Window.FEATURE_NO_TITLE);
 		setContentView(R.layout.choose_area);
