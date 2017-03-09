@@ -258,6 +258,11 @@ public class ChooseAreaActivity extends Activity {
 		}else if(currentLevel==LEVEL_CITY){
 			queryProvinces();
 		}else{
+			if(isFromWeatherActivity){
+				Intent intent = new Intent(this, WeatherActivity.class);
+				startActivity(intent);
+				
+			}
 			finish();
 		}
 	}
