@@ -1,19 +1,16 @@
 package com.xsd.coolweather.db;
 
-import android.annotation.SuppressLint;
 import android.content.Context;
-import android.database.DatabaseErrorHandler;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteDatabase.CursorFactory;
 import android.database.sqlite.SQLiteOpenHelper;
 
 public class CoolWeatherOpenHelper extends SQLiteOpenHelper {
 
-	@SuppressLint("NewApi")
+	
 	public CoolWeatherOpenHelper(Context context, String name,
-			CursorFactory factory, int version,
-			DatabaseErrorHandler errorHandler) {
-		super(context, name, factory, version, errorHandler);
+			CursorFactory factory, int version) {
+		super(context, name, factory, version);
 
 	}
 
